@@ -31,11 +31,12 @@
       font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     main { max-width: 640px; margin: 0 auto; padding: 72px 20px; }
-    .avatar {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: var(--accent); color: #fff;
-      display: grid; place-items: center;
-      font-size: 28px; font-weight: 600;
+    .logo {
+      display: block; width: 280px; max-width: 100%; height: auto;
+    }
+    @media (prefers-color-scheme: dark) {
+      /* The logo is dark gray, so give it a light backing in dark mode */
+      .logo { background: #faf8f5; border-radius: 12px; padding: 8px 16px; }
     }
     h1 { font-size: 40px; line-height: 1.1; margin: 24px 0 8px; }
     .tagline { color: var(--muted); font-size: 19px; margin: 0 0 32px; }
@@ -57,7 +58,7 @@
 </head>
 <body>
   <main>
-    <div class="avatar">BC</div>
+    <img class="logo" src="jeremys-razors-logo.webp" alt="Jeremy's Razors">
     <h1>Hi, I'm Ben.</h1>
     <p class="tagline">General Manager at Jeremy's Razors.</p>
 
