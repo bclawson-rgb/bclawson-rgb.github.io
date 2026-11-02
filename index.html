@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ben Clawson</title>
   <style>
+    /* Brand colors sampled from the Jeremy's Razors logo */
     :root {
-      --bg: #faf8f5;
-      --text: #1f1d1a;
-      --muted: #6b665e;
-      --accent: #c2502b;
+      --charcoal: #56555a;
+      --orange: #eb6b00;
+      --warm-gray: #a5a097;
+
+      --bg: #ffffff;
+      --text: var(--charcoal);
+      --muted: var(--charcoal);
+      --label: var(--warm-gray);
+      --accent: var(--orange);
       --card: #ffffff;
-      --border: #e7e2da;
+      --border: #e4e1dc;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #161514;
-        --text: #f0ede8;
-        --muted: #a39d93;
-        --accent: #ee7a52;
-        --card: #1f1e1c;
-        --border: #2e2c29;
+        --bg: #1c1c1e;
+        --text: #f2f1ef;
+        --muted: var(--warm-gray);
+        --label: var(--warm-gray);
+        --card: #26262a;
+        --border: #38373c;
       }
     }
     * { box-sizing: border-box; }
@@ -36,29 +42,32 @@
     }
     @media (prefers-color-scheme: dark) {
       /* The logo is dark gray, so give it a light backing in dark mode */
-      .logo { background: #faf8f5; border-radius: 12px; padding: 8px 16px; }
+      .logo { background: #ffffff; border-radius: 12px; padding: 8px 16px; }
     }
     h1 { font-size: 40px; line-height: 1.1; margin: 24px 0 8px; }
     .tagline { color: var(--muted); font-size: 19px; margin: 0 0 32px; }
     h2 {
       font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
-      color: var(--muted); margin: 48px 0 12px;
+      color: var(--label); margin: 48px 0 12px;
     }
     a { color: var(--accent); }
     .projects { display: grid; gap: 12px; }
     .project {
       background: var(--card); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
       border-radius: 12px; padding: 16px 20px;
     }
     .project strong { display: block; }
     .project span { color: var(--muted); font-size: 15px; }
     .links { display: flex; flex-wrap: wrap; gap: 20px; padding: 0; list-style: none; }
-    footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
+    footer { margin-top: 64px; color: var(--label); font-size: 14px; }
   </style>
 </head>
 <body>
   <main>
-    <img class="logo" src="jeremys-razors-logo.webp" alt="Jeremy's Razors">
+    <a href="https://www.jeremysrazors.com/" target="_blank" rel="noopener">
+      <img class="logo" src="jeremys-razors-logo.webp" alt="Jeremy's Razors website">
+    </a>
     <h1>Hi, I'm Ben.</h1>
     <p class="tagline">General Manager at Jeremy's Razors.</p>
 
